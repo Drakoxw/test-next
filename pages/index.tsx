@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import { logDev, setToStorage } from '../utils'
+import { crypterRSA, crypterRSA_Api } from '../utils/crypter'
 
 export default function Home() {
   const router = useRouter();
@@ -11,6 +12,11 @@ export default function Home() {
   if (router.asPath  !== '/') {
     router.push(router.asPath )
   }
+
+  const enc = crypterRSA_Api.encrypt('Hola Mundo')
+  const enc2 = crypterRSA().encrypt('Hola Mundo')
+  logDev('enc : ', enc )
+  logDev('enc : ', enc2 )
 
   return (
     <div className={styles.container}>
