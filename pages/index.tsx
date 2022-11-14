@@ -1,22 +1,17 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import httpInstance from '../services/http'
 import styles from '../styles/Home.module.css'
-import { logDev, setToStorage } from '../utils'
-import { crypterRSA, crypterRSA_Api } from '../utils/crypter'
 
 export default function Home() {
-  const router = useRouter();
-  logDev('urlParams', router.asPath )
-  setToStorage('urlParams', router.asPath)
+  const router = useRouter()
   if (router.asPath  !== '/') {
     router.push(router.asPath )
   }
-
-  const enc = crypterRSA_Api.encrypt('Hola Mundo')
-  const enc2 = crypterRSA().encrypt('Hola Mundo')
-  logDev('enc : ', enc )
-  logDev('enc : ', enc2 )
+  if (router.asPath === '/kofbalwvlawbevaiwbe') {
+    httpInstance().get('/api/secret')
+  }
 
   return (
     <div className={styles.container}>
