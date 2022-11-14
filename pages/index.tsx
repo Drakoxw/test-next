@@ -30,9 +30,13 @@ export default function Home() {
         <Link href='/signup/'>
           Signup
         </Link>
+        <Link href='/cache/'>
+          Cache
+        </Link>
 
         <hr />
-        <p className={roboto.className}>Texto con Roboto</p>
+        <hr />
+        <p className={`${roboto.className}`}>Texto con Roboto</p>
         <p >Texto sin Roboto</p>
         <hr />
         <p className={poppins.className}>Texto con poppins</p>
