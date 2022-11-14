@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import httpInstance from '../services/http'
 import styles from '../styles/Home.module.css'
+import { roboto, poppins } from '../styles/fonts'
 
 export default function Home() {
   const router = useRouter()
@@ -29,6 +30,14 @@ export default function Home() {
         <Link href='/signup/'>
           Signup
         </Link>
+
+        <hr />
+        <p className={roboto.className}>Texto con Roboto</p>
+        <p >Texto sin Roboto</p>
+        <hr />
+        <p className={poppins.className}>Texto con poppins</p>
+        <p >Texto sin poppins</p>
+        <hr />
 
         <p className={styles.description}>
           Get started by editing{' '}
