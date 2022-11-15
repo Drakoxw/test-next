@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+      <tile>
+        <square70x70logo src="/ave-logo-70x70.png"/>
+        <square150x150logo src="/ave-logo-150x150.png"/>
+        <wide310x150logo src="/logo-largo-310x150.png"/>
+        <square310x310logo src="/ave-logo-310x310.png"/>
+        <TileColor>#e3e6e8</TileColor>
+        <TileImage src="/ave-logo-150x150.png" />
+      </tile>
+    </msapplication>
+</browserconfig>
