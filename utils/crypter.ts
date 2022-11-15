@@ -1,5 +1,6 @@
 
 export const uses = 'no requerida'
+// comentario
 // ///////// LIBRERIAS PACKAGE ///////////
 // import EncryptRsa from 'encrypt-rsa'
 // const CryptoJS = require('crypto-js')
