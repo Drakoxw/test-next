@@ -7,6 +7,7 @@ import { roboto, poppins } from '../styles/fonts'
 import { logDev, setToStorage } from '../utils'
 import { LoginAve } from '../services'
 import TagManager from '../components/tagManager'
+import { gapi } from '../services/googleTags'
 
 const createToken =  async () => {
   logDev('createToken')
@@ -25,6 +26,8 @@ export default function Home() {
   if (router.asPath === '/kofbalwvlawbevaiwbe') {
     httpInstance().get('/api/secret')
   }
+  // logDev('ga', gapi)
+  // gapiLoad()
 
   return (
     <div className={styles.container}>

@@ -15,6 +15,20 @@ export default function TagManager () {
       </Script>
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${TagId}"
       height="0" width="0" className="noscript"></iframe></noscript>
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5LKKN2P0W"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-G5LKKN2P0W');
+          </script>
+        `}
+      </Script>
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${TagId}"
+      height="0" width="0" className="noscript"></iframe></noscript>
     </>
   )
 }
