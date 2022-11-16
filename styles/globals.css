@@ -16,6 +16,11 @@ a {
   box-sizing: border-box;
 }
 
+.noscript {
+  display:none;
+  visibility:hidden
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

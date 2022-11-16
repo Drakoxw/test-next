@@ -4,14 +4,17 @@ import { useRouter } from 'next/router'
 import httpInstance from '../services/http'
 import styles from '../styles/Home.module.css'
 import { roboto, poppins } from '../styles/fonts'
-import { getToStorage, logDev, setToStorage } from '../utils'
+import { logDev, setToStorage } from '../utils'
+import { LoginAve } from '../services'
+import TagManager from '../components/tagManager'
 
-const createToken = () => {
+const createToken =  async () => {
   logDev('createToken')
-  setToStorage('token', '123456789')
-  setTimeout(() => {
-    logDev('setTimeout', getToStorage('token'))
-  }, 3000);
+  const data = await LoginAve()
+  if (data) {
+    logDev('Token', data)
+    setToStorage('token', data.data.token)
+  }
 }
 
 export default function Home() {
@@ -72,6 +75,7 @@ export default function Home() {
         <link rel="apple-touch-icon" href="/icons/favicon-3.png"></link>
 
       </Head>
+      <TagManager></TagManager>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
