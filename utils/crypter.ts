@@ -5,10 +5,10 @@ export const uses = 'no requerida'
 // import EncryptRsa from 'encrypt-rsa'
 // const CryptoJS = require('crypto-js')
 // ///////// WINDOW CONSOLE LOG ///////////
-// import { logDev } from './console';
+// import { logDev } from './console'
 // ///////// LIBRERIAS NATIVAS ///////////
-// const crypto = require('crypto');
-// const constants = require('constants');
+// const crypto = require('crypto')
+// const constants = require('constants')
 
 // const Hex = CryptoJS.enc.Hex
 // const Utf8 = CryptoJS.enc.Utf8
@@ -20,6 +20,7 @@ export const uses = 'no requerida'
 // cvwfO7rQGv+yaGiRd5dk1djrSbBfZmNzuFdrrFlDhJyAUo74162dwK8Ab0M3/mYw
 // F1F03nvwYpb5rTYwwQIDAQAB
 // -----END PUBLIC KEY-----`
+
 // const privateKeyApi = `-----BEGIN RSA PRIVATE KEY-----
 // MIICXAIBAAKBgQDkQaNZSagORWkG4a+d9v/tRlPBweKQ34MANTF2TI0WLfQyOWX6
 // ckk+RQSQG+R4S7YBFmq00Tk/SgqJEkJzEWZo6R9vcvwfO7rQGv+yaGiRd5dk1djr
@@ -62,11 +63,11 @@ export const uses = 'no requerida'
 //  * @returns string
 //  */
 // const encryptRSAtoApi = (value: string) => {
-//   const bufferToEncrypt = new Buffer(value);
+//   const bufferToEncrypt = new Buffer(value)
 //   const encrypted = crypto.publicEncrypt({
 //     key: publicKeyApi, 
 //     padding : constants.RSA_PKCS1_PADDING
-//   }, bufferToEncrypt);
+//   }, bufferToEncrypt)
 //   return encrypted.toString('base64')
 // }
 
@@ -129,7 +130,7 @@ export const uses = 'no requerida'
 //           oaepHash: 'sha256',
 //         },
 //         Buffer.from(value)
-//       );
+//       )
 //       return encryptedData.toString('base64')
 //     } catch (error) {
 //       logDev('Encrypt', String(error))
@@ -152,7 +153,7 @@ export const uses = 'no requerida'
 //   },
 //   signature: (toSign: string ) => {
 //     try {
-//       const signer = crypto.createSign('RSA-SHA256');
+//       const signer = crypto.createSign('RSA-SHA256')
 //       signer.update(toSign)
 //       return signer.sign(privateKeyApi, 'base64')
 //     } catch (error) {
@@ -161,7 +162,7 @@ export const uses = 'no requerida'
 //   },
 //   verifySign: (signed: string, toSign: string) => {
 //     try {
-//       const verify = crypto.createVerify('RSA-SHA256');
+//       const verify = crypto.createVerify('RSA-SHA256')
 //       verify.update(toSign)
 //       return verify.verify(publicKeyApi, signed, 'base64')
 //     } catch (error) {

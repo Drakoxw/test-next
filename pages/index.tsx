@@ -4,6 +4,15 @@ import { useRouter } from 'next/router'
 import httpInstance from '../services/http'
 import styles from '../styles/Home.module.css'
 import { roboto, poppins } from '../styles/fonts'
+import { getToStorage, logDev, setToStorage } from '../utils'
+
+const createToken = () => {
+  logDev('createToken')
+  setToStorage('token', '123456789')
+  setTimeout(() => {
+    logDev('setTimeout', getToStorage('token'))
+  }, 3000);
+}
 
 export default function Home() {
   const router = useRouter()
@@ -21,7 +30,7 @@ export default function Home() {
         <title>Create Next App</title>
         <meta name="description" content="Aveonline.co - Soluciones logisticas" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name = 'viewport' content = 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
         <meta name="application-name" content="PWA App" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,9 +81,14 @@ export default function Home() {
         <Link href='/signup/'>
           Signup
         </Link>
-        <Link href='/cache/'>
-          Cache
-        </Link>
+        <Link href='/cache/'>Cache</Link>
+        <Link href='/resposesApi/rickMorty/'>rickMorty</Link>
+        <Link href='/resposesApi/pokeApi/'>Poke Api</Link>
+        <Link href='/onBoarding/confirmEmail/'>Confirmar Email</Link>
+        <Link href='/onBoarding/createAgent/'>Crear agente </Link>
+        <Link href='/onBoarding/createCompany/'>crear Compañia </Link>
+
+        <button onClick={() => createToken() }>Crear token</button>
 
         <hr />
         <hr />

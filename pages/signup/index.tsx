@@ -19,9 +19,10 @@ export default function Signup() {
       <br />
       <br />
       <h1>Hola : Signup</h1>
-      <Link href='/'>
-        Home
-      </Link>
+      <Link href='/'> Home </Link>
+      <Link href='/onBoarding/comfirmEmail'>Confirmar Email</Link>
+      <Link href='/onBoarding/createAgent'>Crear agente </Link>
+      <Link href='/onBoarding/createCompany'>crear Compañia </Link>
     </>
   );
 }
