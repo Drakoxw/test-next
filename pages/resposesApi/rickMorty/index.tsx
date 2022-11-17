@@ -45,3 +45,9 @@ export default function RickMorty() {
 function Capitulo(title: string ) {
   return <h4>{title ? title : 'Default title'}</h4>;
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: 'page rickMorty' },
+  }
+}

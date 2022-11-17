@@ -14,3 +14,9 @@ export default function CreateAgent() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: 'page createAgent' },
+  }
+}

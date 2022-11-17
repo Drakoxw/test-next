@@ -14,3 +14,9 @@ export default function ConfirmEmail() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: 'page confirmEmail' },
+  }
+}

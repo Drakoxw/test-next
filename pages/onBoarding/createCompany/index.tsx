@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 export default function CreateCompany() {
-
   return (
     <>
       <br />
@@ -13,4 +12,10 @@ export default function CreateCompany() {
       <Link href='/onBoarding/createCompany/'>crear Compañia </Link>
     </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: { page: 'page createCompany' },
+  }
 }

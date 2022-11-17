@@ -6,8 +6,8 @@ import styles from '../styles/Home.module.css'
 import { roboto, poppins } from '../styles/fonts'
 import { logDev, setToStorage } from '../utils'
 import { LoginAve } from '../services'
-import TagManager from '../components/tagManager'
-import { gapi } from '../services/googleTags'
+import TagManager, { GTM_ID } from '../components/tagManager'
+import { GapiLoad } from '../components/gapiScript'
 
 const createToken =  async () => {
   logDev('createToken')
@@ -18,6 +18,8 @@ const createToken =  async () => {
   }
 }
 
+
+
 export default function Home() {
   const router = useRouter()
   if (router.asPath  !== '/') {
@@ -26,8 +28,7 @@ export default function Home() {
   if (router.asPath === '/kofbalwvlawbevaiwbe') {
     httpInstance().get('/api/secret')
   }
-  // logDev('ga', gapi)
-  // gapiLoad()
+  GapiLoad()
 
   return (
     <div className={styles.container}>
@@ -80,41 +81,48 @@ export default function Home() {
       </Head>
       <TagManager></TagManager>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            Welcome to <a href="https://nextjs.org">Next.js!</a>
+          </h1>
 
-        <Link href='/signup/'>
-          Signup
-        </Link>
-        <Link href='/cache/'>Cache</Link>
-        <Link href='/resposesApi/rickMorty/'>rickMorty</Link>
-        <Link href='/resposesApi/pokeApi/'>Poke Api</Link>
-        <Link href='/onBoarding/confirmEmail/'>Confirmar Email</Link>
-        <Link href='/onBoarding/createAgent/'>Crear agente </Link>
-        <Link href='/onBoarding/createCompany/'>crear Compañia </Link>
+          <Link href='/signup/'>
+            Signup
+          </Link>
+          <Link href='/cache/'>Cache</Link>
+          <Link href='/resposesApi/rickMorty/'>rickMorty</Link>
+          <Link href='/resposesApi/pokeApi/'>Poke Api</Link>
+          <Link href='/onBoarding/confirmEmail/'>Confirmar Email</Link>
+          <Link href='/onBoarding/createAgent/'>Crear agente </Link>
+          <Link href='/onBoarding/createCompany/'>crear Compañia </Link>
 
-        <button onClick={() => createToken() }>Crear token</button>
+          <button onClick={() => createToken() }>Crear token</button>
 
-        <hr />
-        <hr />
-        <p className={`${roboto.className}`}>Texto con Roboto</p>
-        <p >Texto sin Roboto</p>
-        <hr />
-        <p className={poppins.className}>Texto con poppins</p>
-        <p >Texto sin poppins</p>
-        <hr />
+          <hr />
+          <hr />
+          <p className={`${roboto.className}`}>Texto con Roboto</p>
+          <p >Texto sin Roboto</p>
+          <hr />
+          <p className={poppins.className}>Texto con poppins</p>
+          <p >Texto sin poppins</p>
+          <hr />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+          <p className={styles.description}>
+            Get started by editing{' '}
+            <code className={styles.code}>pages/index.tsx</code>
+          </p>
 
-      </main>
+        </main>
 
-      <footer className={styles.footer}>
-      </footer>
+        <footer className={styles.footer}>
+        </footer>
+        
     </div>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: { page: 'page index' },
+  }
 }
