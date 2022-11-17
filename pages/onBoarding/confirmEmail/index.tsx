@@ -10,7 +10,7 @@ export default function ConfirmEmail() {
     url: router.pathname,
     data: {
       email: 'mail@mail.co',
-      name: 'nameClient'
+      name: 'nameClient',
     }
   }
 

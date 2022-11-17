@@ -1,8 +1,7 @@
 declare const window: any;
 
-import Script from "next/script"
-import { logDev } from "../utils"
-export const GTM_ID = "GTM-5BCN4K8"
+import Script from 'next/script'
+export const GTM_ID = 'GTM-5BCN4K8'
 
 
 export default function TagManager () {
@@ -23,12 +22,11 @@ export default function TagManager () {
 
 export const gtmVirtualPageView = (rest: any) => {
   console.clear()
-  const event = { event: 'VirtualPageView', ...rest }
+  const event = { event: 'VirtualPageView', date: new Date().toTimeString(), ...rest }
   if ( window && window?.dataLayer) {
     const lastEvent = window.dataLayer[window.dataLayer.length - 1]
     if (lastEvent.pageTypeName !== event.pageTypeName) {
       window.dataLayer.push(event)
     }
   }
-  console.log('dataLayer', window.dataLayer)
 }
