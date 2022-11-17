@@ -22,11 +22,15 @@ export default function TagManager () {
 }
 
 export const gtmVirtualPageView = (rest: any) => {
+  console.clear()
+  const event = { event: 'VirtualPageView', ...rest }
   if ( window && window?.dataLayer) {
-    window.dataLayer?.push({
-      event: 'VirtualPageView',
-      ...rest,
-    })
-    console.log('dataLayer', window.dataLayer)
+    const lastEvent = window.dataLayer[window.dataLayer.length - 1]
+    if (lastEvent.pageTypeName !== event.pageTypeName) {
+      window.dataLayer.push(event)
+    }
+  } else {
+    window.dataLayer = [event]
   }
+  console.log('dataLayer', window.dataLayer)
 }
