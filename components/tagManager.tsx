@@ -29,8 +29,6 @@ export const gtmVirtualPageView = (rest: any) => {
     if (lastEvent.pageTypeName !== event.pageTypeName) {
       window.dataLayer.push(event)
     }
-  } else {
-    window.dataLayer = [event]
   }
   console.log('dataLayer', window.dataLayer)
 }

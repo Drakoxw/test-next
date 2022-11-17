@@ -1,7 +1,7 @@
-export {};
+// export {};
 
-declare global {
-  interface Window {
-    example: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     example: any;
+//   }
+// }
