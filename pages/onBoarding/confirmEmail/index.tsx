@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router';
-import { gtmVirtualPageView } from '../../../components/tagManager';
-import LayoutOnBoarding from '../../../layouts/LayoutOnBoarding';
+import { useRouter } from 'next/router'
+import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
 
 export default function ConfirmEmail() {
   const router = useRouter()
@@ -25,7 +24,6 @@ export default function ConfirmEmail() {
         <Link href='/onBoarding/createAgent/'>Crear agente </Link>
         <Link href='/onBoarding/createCompany/'>crear Compañia </Link>
         <br />
-        <button onClick={() => gtmVirtualPageView(mainDataLayer)}>Click</button>
     </LayoutOnBoarding>
   );
 }
