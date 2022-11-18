@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import TagManager from '../../../components/tagManager';
-import LayoutOnBoarding from '../../../layouts/LayoutOnBoarding';
+import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
 
-export default function CreateCompany() {
+export default function Signup() {
+ 
   return (
     <LayoutOnBoarding>
       <TagManager/>
@@ -16,6 +17,9 @@ export default function CreateCompany() {
 
 export async function getStaticProps() {
   return {
-    props: { page: 'page createCompany' },
+    props: { 
+      event: 'CreateLeadOnBoarding',
+      page: 'page signup'
+    },
   }
 }

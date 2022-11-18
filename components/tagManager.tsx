@@ -3,7 +3,6 @@ declare const window: any;
 import Script from 'next/script'
 export const GTM_ID = 'GTM-5BCN4K8'
 
-
 export default function TagManager () {
   return (
     <>
@@ -15,14 +14,13 @@ export default function TagManager () {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','${GTM_ID}');
       `}
-    </Script>
+      </Script>
     </>
   )
 }
 
-export const gtmVirtualPageView = (rest: any) => {
-  console.clear()
-  const event = { event: 'VirtualPageView', date: new Date().toTimeString(), ...rest }
+export const gtmEventsHandler = ( rest: any ) => {
+  const event = { date: new Date().toTimeString(), ...rest }
   if ( window && window?.dataLayer) {
     const lastEvent = window.dataLayer[window.dataLayer.length - 1]
     if (lastEvent.pageTypeName !== event.pageTypeName) {

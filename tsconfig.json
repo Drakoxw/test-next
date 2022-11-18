@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": ["layouts/*"],
+      "@components/*": ["components/*"],
+      "@services/*": ["services/*"],
+      "@onBoarding/*": ["pages/onBoarding/*"],
+      "@constants/*": ["models/constants/*"],
+      "@types/*": ["models/types/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",

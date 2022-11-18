@@ -1,0 +1,8 @@
+export const GOOGLE_TAG_ID = 'GTM-5BCN4K8'
+export const client_id = '408604892889-mfd98p19mejclr2r0s1n2defeito8uc8.apps.googleusercontent.com'
+export const project_id = 'oathtest-364104'
+export const auth_uri = 'https://accounts.google.com/o/oauth2/auth'
+export const token_uri = 'https://oauth2.googleapis.com/token'
+export const auth_provider_x509_cert_url = 'https://www.googleapis.com/oauth2/v1/certs'
+export const client_secret = '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'
+export const apiKey = 'AIzaSyAVahL6KXYOO8_nAda_vpTHkqph2fKs9PY'

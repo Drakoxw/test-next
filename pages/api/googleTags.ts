@@ -7,8 +7,6 @@ const auth_uri = 'https://accounts.google.com/o/oauth2/auth'
 const token_uri = 'https://oauth2.googleapis.com/token'
 const auth_provider_x509_cert_url = 'https://www.googleapis.com/oauth2/v1/certs'
 const client_secret = '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'
-const redirect_uris = ['https://test-next-lake.vercel.app']
-const javascript_origins = ['https://test-next-lake.vercel.app']
 const apiKey = 'AIzaSyAVahL6KXYOO8_nAda_vpTHkqph2fKs9PY'
 
 export function authenticate() {
