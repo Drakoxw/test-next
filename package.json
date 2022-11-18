@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@types/facebook-nodejs-business-sdk": "^15.0.0",
+    "@types/request-ip": "^0.0.37",
     "coffeescript": "^2.7.0",
     "eslint-config-prettier": "^8.5.0"
   }
