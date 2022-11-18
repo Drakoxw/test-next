@@ -1,9 +1,8 @@
-import httpInstance from './http'
-
+import http from './http'
 
 export const LoginAve = () => {
-  return httpInstance('APP_AVEONLINE')
-  .post('comunes/v2.0/autenticarusuario.php', {
+  const route = 'comunes/v2.0/autenticarusuario.php'
+  const body = {
     tipo: "authLogin",
     usuario: "demo",
     idtipo_cliente: "1",
@@ -14,5 +13,6 @@ export const LoginAve = () => {
     pais: "polombia",
     nombre: "Will",
     id_usuario: "1"
-  })
+  }
+  return http('APP_AVEONLINE').post(route, body)
 }

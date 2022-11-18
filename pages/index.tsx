@@ -1,21 +1,23 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import { roboto, poppins } from '../styles/fonts'
-
-import TagManager from '../components/tagManager'
-import LayoutOnBoarding from '../layouts/LayoutOnBoarding'
+import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
+import { useContext, useEffect } from 'react'
+import { GetIpClient } from '@services/getIpClient'
+import { GlobalCtx, useGlobalCtx } from 'state'
+import { logDev } from 'utils'
+type RespIp = { ip: string}
 
 export default function Home() {
   const router = useRouter()
+  
   if (router.asPath  !== '/') {
     router.push(router.asPath )
   }
 
   return (
     <LayoutOnBoarding>
-      <TagManager/>
       <div className={styles.container}>
 
           <main className={styles.main}>
@@ -61,7 +63,7 @@ export async function getStaticProps() {
   return {
     props: { 
       event: 'Login',
-      page: 'page index' 
-    },
+      page: 'page initial' 
+    }
   }
 }

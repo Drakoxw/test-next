@@ -1,12 +1,13 @@
 import axios, { AxiosError, AxiosInstance } from 'axios'
 import { logDev } from '../utils/console'
 
-type TYPE_URL = 'LOCALHOST' | 'APP_AVEONLINE'
+type TYPE_URL = 'LOCALHOST' | 'APP_AVEONLINE' | 'LOCAL_API'
 
 function createAxios() {
   const getURL = (typeURL: TYPE_URL): string | undefined => {
     if (typeURL === 'LOCALHOST') return 'http://localhost/api/'
     if (typeURL === 'APP_AVEONLINE') return 'https://aveonline.co/api/'
+    if (typeURL === 'LOCAL_API') return '/'
   }
 
   return (typeURL: TYPE_URL = 'APP_AVEONLINE'): AxiosInstance => {
@@ -28,6 +29,6 @@ function createAxios() {
   }
 }
 
-const httpInstance = createAxios()
+const http = createAxios()
 
-export default httpInstance
+export default http

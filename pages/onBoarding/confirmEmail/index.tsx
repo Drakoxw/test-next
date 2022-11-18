@@ -4,6 +4,7 @@ import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
 
 export default function ConfirmEmail() {
   const router = useRouter()
+  
   const mainDataLayer = {
     pageTypeName: 'page confirmEmail',
     url: router.pathname,
@@ -30,6 +31,9 @@ export default function ConfirmEmail() {
 
 export async function getStaticProps() {
   return {
-    props: { page: 'page confirmEmail' },
+    props: { 
+      event: 'ConfirmEmail',
+      page: 'page confirmEmail' 
+    }
   }
 }
