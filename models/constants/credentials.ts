@@ -1,6 +1,7 @@
 export const GOOGLE_TAG_ID = 'GTM-5BCN4K8'
 // export const GOOGLE_ANALYTIC_ID = 'UA-70349315-7'
 export const GOOGLE_ANALYTIC_ID = 'G-4XTGLL5PRP'
+export const META_PIXEL_ID = '967057470786141'
 
 export const client_id = '408604892889-mfd98p19mejclr2r0s1n2defeito8uc8.apps.googleusercontent.com'
 export const project_id = 'oathtest-364104'
