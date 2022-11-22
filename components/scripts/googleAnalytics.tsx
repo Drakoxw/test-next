@@ -24,15 +24,4 @@ export default function GoogleAnalytics () {
   </>
   )
 }
- 
-export const pageview = (url: string) => {
-  window.gtag("config", GOOGLE_ANALYTIC_ID, {
-    page_path: url,
-  });
-};
- 
-export const GA4EventsHandler = ( event: string, category :string, label: string, value: any ) => {
-  window.gtag('event', event, {
-    value,
-  });
-}
+
