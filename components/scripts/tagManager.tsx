@@ -6,7 +6,7 @@ import { logClear, logDev } from 'utils'
 export default function TagManager () {
   return (
     <>
-      <Script id="google-tag-manager" strategy="afterInteractive">
+      <Script async defer id="google-tag-manager" strategy="afterInteractive">
       {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
