@@ -23,7 +23,7 @@ export const gtmEventsHandler = ( rest: any ) => {
   const event = { date: new Date().toTimeString(), ...rest }
   if ( window && window?.dataLayer) {
     const lastEvent = window.dataLayer[window.dataLayer.length - 1]
-    if (lastEvent.pageTypeName !== event.pageTypeName) {
+    if (lastEvent.pageTypeName !== rest.pageTypeName) {
       window.dataLayer.push(event)
     }
   }
