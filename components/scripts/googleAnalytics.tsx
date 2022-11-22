@@ -31,11 +31,8 @@ export const pageview = (url: string) => {
   });
 };
  
-export const GA4EventsHandler = ( action: string, category :string, label: string, value: any ) => {
-  window.gtag('set', 'page_path', '/new-page.html');
-  window.gtag('event', action, {
-    event_category: category,
-    event_label: label,
+export const GA4EventsHandler = ( event: string, category :string, label: string, value: any ) => {
+  window.gtag('event', event, {
     value,
   });
 }

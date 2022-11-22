@@ -30,22 +30,22 @@ export default function App({ Component, pageProps }: AppProps) {
         getIp().then(ipCli => {
           mainDataLayer.ip = ipCli
           gtmEventsHandler(mainDataLayer);
-          GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
-            url: router.pathname,
-            ip: ipCli
-          })
+          // GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
+          //   url: router.pathname,
+          //   ip: ipCli
+          // })
         })
       } else {
         gtmEventsHandler(mainDataLayer);
-        GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
-          url: router.pathname,
-        })
+        // GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
+        //   url: router.pathname,
+        // })
       } 
     } catch (_) {
       gtmEventsHandler(mainDataLayer);
-      GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
-        url: router.pathname,
-      })
+      // GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
+      //   url: router.pathname,
+      // })
     }
 
   }, [pageProps])
