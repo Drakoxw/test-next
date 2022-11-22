@@ -6,6 +6,7 @@ import { gtmEventsHandler } from '../components/scripts/tagManager'
 import { useGlobalCtx } from 'state';
 import { GetIpClient } from '@services/getIpClient';
 import { logDev } from 'utils';
+import { GA4EventsHandler } from '@components/scripts/googleAnalytics';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -29,12 +30,22 @@ export default function App({ Component, pageProps }: AppProps) {
         getIp().then(ipCli => {
           mainDataLayer.ip = ipCli
           gtmEventsHandler(mainDataLayer);
+          GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
+            url: router.pathname,
+            ip: ipCli
+          })
         })
       } else {
         gtmEventsHandler(mainDataLayer);
+        GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
+          url: router.pathname,
+        })
       } 
     } catch (_) {
       gtmEventsHandler(mainDataLayer);
+      GA4EventsHandler(pageProps.event, 'changeUrl', pageProps.page, {
+        url: router.pathname,
+      })
     }
 
   }, [pageProps])

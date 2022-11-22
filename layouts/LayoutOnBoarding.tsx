@@ -55,6 +55,7 @@ export default function LayoutOnBoarding({children , title = 'Aveonline' }: Prop
         <link rel="apple-touch-icon" href="/icons/favicon-3.png"></link>
 
       </Head>
+      
       <TagManager />
       <GoogleAnalytics />
       

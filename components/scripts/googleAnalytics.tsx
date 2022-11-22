@@ -24,3 +24,18 @@ export default function GoogleAnalytics () {
   </>
   )
 }
+ 
+export const pageview = (url: string) => {
+  window.gtag("config", GOOGLE_ANALYTIC_ID, {
+    page_path: url,
+  });
+};
+ 
+export const GA4EventsHandler = ( action: string, category :string, label: string, value: any ) => {
+  window.gtag('set', 'page_path', '/new-page.html');
+  window.gtag('event', action, {
+    event_category: category,
+    event_label: label,
+    value,
+  });
+}
