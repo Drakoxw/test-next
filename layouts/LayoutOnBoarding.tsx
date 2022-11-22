@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { ReactNode } from 'react'
 import TagManager from '@components/scripts/tagManager'
 import GoogleAnalytics from '@components/scripts/googleAnalytics'
+import MetaPixelTrack from '@components/scripts/metaPixel'
 
 type PropsLayout = { children: ReactNode, title?: string }
 
@@ -58,6 +59,7 @@ export default function LayoutOnBoarding({children , title = 'Aveonline' }: Prop
       
       <TagManager />
       <GoogleAnalytics />
+      <MetaPixelTrack />
       
       <main>{children}</main>
     </>
