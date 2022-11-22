@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import TagManager from '../components/tagManager'
+import TagManager from '@components/scripts/tagManager'
+import GoogleAnalytics from '@components/scripts/googleAnalytics'
 
 type PropsLayout = { children: ReactNode, title?: string }
 
@@ -55,6 +56,8 @@ export default function LayoutOnBoarding({children , title = 'Aveonline' }: Prop
 
       </Head>
       <TagManager />
+      <GoogleAnalytics />
+      
       <main>{children}</main>
     </>
   )

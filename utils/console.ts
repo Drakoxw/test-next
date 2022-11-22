@@ -14,6 +14,12 @@ export function logDev (description = '', data: any = '') {
     console.log(description, data)
   }
 }
+export function logClear () {
+  if (DEV === 'development') {
+    // eslint-disable-next-line no-console
+    console.clear()
+  }
+}
 
 // export function CatchConsole() {
 //   window.console.error = ($event, more) => {

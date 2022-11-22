@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'
-import { gtmEventsHandler } from '../components/tagManager'
+import { gtmEventsHandler } from '../components/scripts/tagManager'
 import { useGlobalCtx } from 'state';
 import { GetIpClient } from '@services/getIpClient';
 import { logDev } from 'utils';
