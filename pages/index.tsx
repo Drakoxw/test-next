@@ -37,7 +37,7 @@ export default function Home() {
 
             <hr />
             <hr />
-            <p className={`${roboto.className}`}>Texto con Roboto</p>
+            <p className={`${roboto.className} bg-red-900`}>Texto con Roboto</p>
             <p >Texto sin Roboto</p>
             <hr />
             <p className={poppins.className}>Texto con poppins</p>
