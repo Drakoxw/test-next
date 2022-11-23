@@ -46,6 +46,8 @@ export default function Signin() {
             flex h-screen flex-col items-center justify-center" >
             <figure>
               <Image
+                width={160}
+                height={35}
                 src="/svgs/logo-dark.svg"
                 alt="logo Aveonline"
                 className="w-40"

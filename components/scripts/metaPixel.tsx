@@ -23,7 +23,7 @@ export default function MetaPixelTrack () {
         fbq('track', 'PageView');`
         }}
     />
-    <noscript><Image height="1" width="1" className='noscript' alt='META_PIXEL'
+    <noscript><img height="1" width="1" className='noscript' alt='META_PIXEL'
       src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
     /></noscript>
   </>
