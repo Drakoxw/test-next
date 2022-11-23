@@ -27,6 +27,4 @@ export const gtmEventsHandler = ( rest: any ) => {
       window.dataLayer.push(event)
     }
   }
-  logClear()
-  logDev('dataLayer', window.dataLayer)
 }

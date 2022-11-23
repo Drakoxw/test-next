@@ -3,17 +3,14 @@ import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import { roboto, poppins } from '../styles/fonts'
 import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
-import { useContext, useEffect } from 'react'
-import { GetIpClient } from '@services/getIpClient'
-import { GlobalCtx, useGlobalCtx } from 'state'
-import { logDev } from 'utils'
-type RespIp = { ip: string}
+import { logClear, logDev } from 'utils'
 
 export default function Home() {
   const router = useRouter()
-  
-  if (router.asPath  !== '/') {
-    router.push(router.asPath )
+
+  if (router.asPath === '/') {
+    logClear()
+    logDev('route', {...router})
   }
 
   return (
@@ -25,6 +22,7 @@ export default function Home() {
               Welcome to <a href="https://nextjs.org">Next.js!</a>
             </h1>
 
+            <Link href='/signin/'>Login</Link>
             <Link href='/onBoarding/signup/'>
               Signup
             </Link>
@@ -59,11 +57,11 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps() {
-  return {
-    props: { 
-      event: 'Login',
-      page: 'page initial' 
-    }
-  }
-}
+// export async function getStaticProps() {
+//   return {
+//     props: { 
+//       event: 'Login',
+//       page: 'page initial' 
+//     }
+//   }
+// }

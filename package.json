@@ -11,6 +11,7 @@
     "analize": "ANALIZE=true npm run build"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
     "@next/bundle-analyzer": "^13.0.3",
     "@next/font": "^13.0.3",
     "@types/node": "18.11.9",
@@ -28,8 +29,10 @@
     "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.39.5",
     "request-ip": "^3.3.0",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/facebook-nodejs-business-sdk": "^15.0.0",

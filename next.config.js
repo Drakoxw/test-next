@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  compress: true
+  compress: true,
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/signin',
+        permanent: true,
+      },
+    ]
+  },
 }
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
