@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 import { createFormLogin, redirectRecoverProcces } from 'utils';
 import { useRouter } from 'next/router';
+import { GetIpClient } from '@services/index';
 
 export default function Signin() {
   const [isValid, setValid] = useState<boolean>(false)
@@ -115,8 +116,14 @@ export default function Signin() {
 }
 
 export async function getStaticProps() {
+  let ip = '';
+  const res = await GetIpClient()
+  if (res && res.data?.ip) {
+    ip = res.data.ip
+  }
   return {
     props: {
+      ip,
       event: "Login",
       page: "page initial",
     },

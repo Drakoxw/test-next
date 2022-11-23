@@ -1,7 +1,6 @@
 declare const window: any
 import Script from 'next/script'
 import { GOOGLE_TAG_ID } from '@constants/index'
-import { logClear, logDev } from 'utils'
 
 export default function TagManager () {
   return (
