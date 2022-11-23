@@ -1,18 +1,7 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
 
 export default function ConfirmEmail() {
-  const router = useRouter()
-  
-  const mainDataLayer = {
-    pageTypeName: 'page confirmEmail',
-    url: router.pathname,
-    data: {
-      email: 'mail@mail.co',
-      name: 'nameClient',
-    }
-  }
 
   return (
     <LayoutOnBoarding>
