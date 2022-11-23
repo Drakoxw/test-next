@@ -4,6 +4,7 @@ import LayoutOnBoarding from '@layouts/LayoutOnBoarding'
 import AppInputPass from '@components/AppInputPass';
 import AppInputText from '@components/AppInputText';
 import { poppins } from '../../styles/fonts'
+import Image from 'next/image';
 
 import { createFormLogin, redirectRecoverProcces } from 'utils';
 import { useRouter } from 'next/router';
@@ -43,7 +44,7 @@ export default function Signin() {
             className="w-full md:w-6/12 lg:w-4/12  mx-auto
             flex h-screen flex-col items-center justify-center" >
             <figure>
-              <img
+              <Image
                 src="/svgs/logo-dark.svg"
                 alt="logo Aveonline"
                 className="w-40"
