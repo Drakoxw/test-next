@@ -28,7 +28,7 @@ a {
 }
 .background_login {
   background-image: url('/imgs/background-login.webp');
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
