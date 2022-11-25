@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
+  images: {
+    domains: ['www.facebook.com']
+  },
   async redirects() {
     return [
       {
